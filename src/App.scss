@@ -1,5 +1,24 @@
 main {
     height: 100svh;
-    width: 100vw;
-    background-color: rgb(60, 55, 55);
+    width: 100%;
+    background-color: black;
+
+    header {
+        height: 4rem;
+        width: 100%;
+        background-color: blue;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    main {
+        width: clamp(1200px, 95%, 2000px);
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    main {
+        width: 100%;
+        background-color: red;
+    }    
 }

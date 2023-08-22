@@ -6,3 +6,9 @@
 ::-webkit-scrollbar {
   display: none;
 }
+#root {
+  display: flex;
+  height: 100svh;
+  width: 100vw;
+  justify-content: center;
+}
