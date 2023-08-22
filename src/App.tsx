@@ -6,9 +6,19 @@ function App() {
     <main>
       <header>
         <label htmlFor="toggle-nav">
-          <button>X</button>
+          <div className="button">X</div>
         </label>
       </header>
+      <input type="checkbox" id="toggle-nav" />
+      <nav></nav>
+      <section>
+        <div className="first">
+          <div className="one"></div>
+          <div className="one"></div>
+          <div className="one"></div>
+          <div className="one"></div>
+        </div>
+      </section>
     </main>
   )
 }

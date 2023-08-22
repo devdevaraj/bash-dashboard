@@ -1,24 +1,97 @@
 main {
+    display: flex;
+    flex-direction: column;
     height: 100svh;
     width: 100%;
     background-color: black;
 
     header {
+        position: fixed;
+        z-index: 1;
+        display: flex;
+        flex-direction: row;
         height: 4rem;
         width: 100%;
-        background-color: blue;
+        padding-inline: 1rem;
+        align-items: center;
+
+        label {
+
+            .button {
+                text-align: center;
+                vertical-align: middle;
+                line-height: 2.5rem;
+                height: 2.5rem;
+                width: 2.5rem;
+                font-size: 2em;
+                border-radius: 0.5rem;
+                box-shadow: 2px 2px 2px black;
+                background-color: white;
+            }
+        }
+    }
+    #toggle-nav {
+        display: none;
+    }
+    #toggle-nav:checked + nav {
+        height: 80vh;
+    }
+    nav {
+        height: 4rem;
+        width: 100%;
+        transition: 0.3s;
+        background-color: gray;
+    }
+    section {
+        width: 100%;
+        flex: 1;
+
+        .first {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+
+            .one {
+                width: 50%;
+                aspect-ratio: 2/1;
+                background-color: blue;
+                border: 1px solid black;
+            }
+        }
     }
 }
 
 @media only screen and (min-width: 1200px) {
     main {
+        flex-direction: row;
         width: clamp(1200px, 95%, 2000px);
+
+        #toggle-nav:checked + nav {
+            width: 14rem;
+            height: unset;
+        }
+        nav {
+            height: 100%;
+            width: 4rem;
+        }
+        nav:hover {
+            width: 14rem;
+        }
+        section {
+            height: 100%;
+            flex: 1;
+
+            .first {
+                .one {
+                    width: 25%;
+                }
+            }
+        }
     }
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 768px) {
     main {
         width: 100%;
-        background-color: red;
     }    
 }
