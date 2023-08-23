@@ -14,7 +14,7 @@ main {
         width: 100%;
         padding-inline: 1rem;
         align-items: center;
-        background-color: aqua;
+        background-color: #eee;
 
         label {
 
@@ -35,25 +35,28 @@ main {
         display: none;
     }
     #toggle-nav:checked + nav {
-        height: 80vh;
+        height: 100svh;
     }
     nav {
         position: fixed;
-        height: 4rem;
+        height: 2rem;
         width: 100%;
-        transition: 0.3s;
-        background-color: gray;
+        padding-top: 4rem;
+        padding-inline: 1rem;
+        transition: 0.4s;
+        background-color: #eee;
+        overflow-y: hidden;
     }
     section {
-        padding-top: 4rem;
         width: 100%;
         flex: 1;
+        padding: 1rem;
+        padding-top: 5rem;
         overflow-y: auto;
 
         .first {
             display: flex;
             flex-direction: column;
-            padding: 1rem;
             gap: 1rem;
             width: 100%;
 
@@ -65,7 +68,7 @@ main {
                 
                 .two {
                     width: 50%;
-                    aspect-ratio: 23/10;
+                    aspect-ratio: 27/10;
                     border-radius: 0.5rem;
                     background-color: white;
                     box-shadow: 0 0 4px 1px black;
@@ -111,13 +114,14 @@ main {
         width: 100%;
 
         section {
+            padding: 1rem;
+            padding-top: 5rem;
             .first {
                 flex-direction: column;
-                padding: 0.5rem;
-                gap: 0.5rem;
+                gap: 1rem;
                 .one {
                     width: 100%;
-                    gap: 0.5rem;
+                    gap: 1rem;
                     flex-direction: column;
                     .two {
                         width: 100%;
