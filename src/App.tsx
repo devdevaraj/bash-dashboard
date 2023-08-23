@@ -13,10 +13,14 @@ function App() {
       <nav></nav>
       <section>
         <div className="first">
-          <div className="one"></div>
-          <div className="one"></div>
-          <div className="one"></div>
-          <div className="one"></div>
+          <div className="one">
+            <div className="two"></div>
+            <div className="two"></div>
+          </div>
+          <div className="one">
+            <div className="two"></div>
+            <div className="two"></div>
+          </div>
         </div>
       </section>
     </main>
